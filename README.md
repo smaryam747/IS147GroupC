@@ -8,6 +8,9 @@ MEMBER: Khalil, ROLE:
 MEMBER: Amari, ROLE:
 
 Project Description: 
+Web based game bot (truth or dare, would you rather, trivia, etc.)
+
+
 
 
 
