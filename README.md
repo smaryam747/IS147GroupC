@@ -1,1 +1,3 @@
-Team Member Names: Elijah, Biruk, Sunila, Thomas, Khalil 
+Team Member Names: Elijah, Biruk, Sunila, Thomas, Khalil, Amari
+
+
