@@ -1,7 +1,7 @@
 # PLAYPAL 
 
 MEMBER: Elijah,           ROLE: Project Manager\
-MEMBER: Biruk,            ROLE: Coder\
+MEMBER: Biruk,            ROLE: Business analyst\
 MEMBER: Sunila,           ROLE: Tester\
 MEMBER: Thomas,           ROLE: Tester\
 MEMBER: Khalil,           ROLE: Coder\
