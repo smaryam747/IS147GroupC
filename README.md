@@ -19,7 +19,7 @@ step 2: Password MUST be 8 characters long, MUST contain at least one digi(0-9),
 step 3: Password will have the following output:\
   a.) Strong Password\
   b.) Password is weak and does not meet required conditions(No special character)\
-  c.) Password is weak and does not meet required conditions (Too short)\
+  c.) Password is weak and does not meet required conditions (Too short)
 
 
 
