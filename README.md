@@ -23,6 +23,8 @@ step 3: Password will have the following output\
 
 # Docker and Java: 
 
+A Dockerfile is a script that contains instructions for building a Docker image.\
+
 step 1: Install Docker 
 
 step 2: Write a simple Java program\
