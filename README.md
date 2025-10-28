@@ -94,7 +94,7 @@ Step 10: Additional resources\
    d.)Tutorial: https://www.youtube.com/ 
 
 Step 11: If you see the following error\
---> Error: LinkageError occurred while loading main class Main java.lang.UnsupportedClassVersionError: Main has been compiled by a more recent version of the Java Runtime (class file version 67.0); this version of the Java Runtime only recognizes class file versions up to 65.0.\
+--> Error: LinkageError occurred while loading main class Main java.lang.UnsupportedClassVersionError: Main has been compiled by a more recent version of the Java Runtime (class file version 67.0); this version of the Java Runtime only recognizes class file versions up to 65.0.
 
    a.)Check your SDK version: Click on the hamburger icon => go to File => Project Structure => SDK to check which version of JDK is currently used by your project.\
    b.)Update your Dockerfile: If the SDK version is 22 or 23, update the `FROM` statement in your Dockerfile to match the version (e.g., `FROM openjdk:22` or `FROM openjdk:23`). Ensure the SDK version matches the Dockerfile.\
