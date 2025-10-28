@@ -27,7 +27,7 @@ step 1: Install Docker
 
 step 2: Write a simple Java program\
   a.) Create a file names Helloworld.java\
-  b.) Have the following content:\
+  b.) Have the following content:
   
   public class HelloWorld {
     public static void main(String[] args) {
@@ -99,7 +99,7 @@ Step 11: If you see the following error\
    a.)Check your SDK version: Click on the hamburger icon => go to File => Project Structure => SDK to check which version of JDK is currently used by your project.\
    b.)Update your Dockerfile: If the SDK version is 22 or 23, update the `FROM` statement in your Dockerfile to match the version (e.g., `FROM openjdk:22` or `FROM openjdk:23`). Ensure the SDK version matches the Dockerfile.\
    c.)Delete the old "out" folder: Remove the "out" folder from your project and rebuild it.\
-   d.)Repeat the step from step 3: Repeat the step from step 3.\
+   d.)Repeat the step from step 3: Repeat the step from step 3.
 
 
 
