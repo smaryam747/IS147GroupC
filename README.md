@@ -80,7 +80,7 @@ Step 8: Key concepts\
               docker build: Builds an image from a Dockerfile.\
               docker run: Runs a container from an image.\
               docker images: Lists all images on the system.\
-              docker ps: Lists running containers.\
+              docker ps: Lists running containers.
               
 Step 9: Pratice Exercise\
    a.) Modify the HelloWorld.java program to print your name.\
