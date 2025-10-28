@@ -5,7 +5,7 @@
                 RUN mkdir /app
                 
                 # Copy the app files from host machine to image filesystem
-                COPY out/production/HelloWorld/ /app
+                COPY out/production/First/ /app
                 
                 # Set the directory for executing future commands
                 WORKDIR /app
