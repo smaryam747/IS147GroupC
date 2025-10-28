@@ -91,7 +91,7 @@ Step 10: Additional resources\
    a.)Docker Documentation: https://docs.docker.com/ \
    b.)Java Documentation: https://docs.oracle.com/en/java/ \
    c.)Docker Hub: https://hub.docker.com/ (to find base images) \
-   d.)Tutorial: https://www.youtube.com/ \
+   d.)Tutorial: https://www.youtube.com/ 
 
 Step 11: If you see the following error\
 --> Error: LinkageError occurred while loading main class Main java.lang.UnsupportedClassVersionError: Main has been compiled by a more recent version of the Java Runtime (class file version 67.0); this version of the Java Runtime only recognizes class file versions up to 65.0.\
