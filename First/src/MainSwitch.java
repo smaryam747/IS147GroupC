@@ -21,6 +21,7 @@ public class MainSwitch {
                     Games.truthOrDare();
                     break;
                 case "b", "b.":
+                    Games.flashCards();
                     break;
                 case "c", "c.":
                     break;
