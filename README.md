@@ -103,6 +103,42 @@ Step 11: If you see the following error\
    c.)Delete the old "out" folder: Remove the "out" folder from your project and rebuild it.\
    d.)Repeat the step from step 3: Repeat the step from step 3.
 
+   # Automate Docker Deployment with GitHub Actions Task: 
+
+Step 1: Modify Dockerfile from task 3
+   Paste the following Dockerfile Configuration:
+   
+              FROM openjdk:23
+              WORKDIR /app
+              COPY src/ /app/
+              RUN javac *.java
+              CMD ["java", "HelloWorld"]
+              
+Step 2: Get username and token from dockerhub
+   a.) Login to Dockerhub
+   b.) Click on your profile =>Account Settings=> Click Personal Access Token with full permission read, write and delete => Generate Token => Save the token on your computer.
+   
+Step 3: Create GitHub Workflow
+   a.) Log in to Giithub= >Select your repositroy => Click on Action => New workflow/Search Simple Workflow => Configure => Commit change
+   b.) Your repositroy should have .github/workflow/somefile.yml added to your repository
+   c.) Paste the following YAML configuration: .github/workflows/docker.yml
+  
+Step 4:  Commit and 
+   a.) 
+   
+               git add .
+               git commit -m "Automate Docker build and push"
+               git push origin main 
+               OR
+               From Intellij git=> commit =>commit and push
+               
+Step 5: Pull and Run from Docker Hub
+  a.) Once the workflow completes, you can pull and run the image:
+  
+              docker pull your-dockerhub-username/hello-world:tagname
+              docker images
+              docker run your-dockerhub-username/hello-world:tagname
+
 
 
 
