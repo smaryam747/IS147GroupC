@@ -26,5 +26,5 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64 \
-            --tag myusername/myimage:latest \
+            --tag smaryam747/myimage:latest \
             --push .
