@@ -123,8 +123,8 @@ Step 3: Create GitHub Workflow\
    b.) Your repositroy should have .github/workflow/somefile.yml added to your repository\
    c.) Paste the following YAML configuration: .github/workflows/docker.yml
   
-Step 4:  Commit and\ 
-   a.) 
+Step 4:  Commit and push\ 
+   a.) Now commit and push your changes to trigger the GitHub Action:
    
                git add .
                git commit -m "Automate Docker build and push"
