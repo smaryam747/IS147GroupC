@@ -18,7 +18,7 @@ public class TorD {
             String uIn = sc.nextLine();
             uInLow = uIn.toLowerCase();
 
-            //switch statement to pick truth or dare prompt or exit
+            //switch statement to pick  a truth or dare prompt or exit
             switch (uInLow) {
                 case "truth":
                     outRandPrompt();
