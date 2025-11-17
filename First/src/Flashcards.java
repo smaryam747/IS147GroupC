@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Flashcards {
     public static Scanner sc = new Scanner(System.in);
-    public static Random rn = new Random();
     static int numofcards;
     static String[][] deck;
     static Boolean continueGame = true;

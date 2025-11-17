@@ -9,6 +9,7 @@ public class Main {
         }
     }
 
+    //initiates the game prompt
     public static void firstSwitch(){
         //output game choices
         System.out.println("\nWelcome to the game program! What would you like to play? (type a or b or c, etc.)\na. Truth or Dare\nb. Flashcards\nc. Trivia\nd. Exit");

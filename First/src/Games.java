@@ -4,5 +4,4 @@ public class Games {
     public static Random rn = new Random();
 
 
-
 }
