@@ -1,4 +1,4 @@
-FROM openjdk:23
+FROM amazon corretto:latest
 WORKDIR /app
 COPY src/ /app/
 RUN javac *.java
