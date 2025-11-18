@@ -12,22 +12,30 @@ public class Flashcards {
 
     
     public static void flashCards() {
-        //give directions and ask for the amount of rows in deck array
+         /*
+         * give directions and ask for the amount of rows in deck array
+         */
         intro();
 
-        //method to have user input values in the deck
+
         makeDeck();
 
-        //prints the current deck
+        /*
+         * prints the current deck
+         */
         displayDeck();
 
-        //run the main switch until the user exits this game
+        /*
+         * run the main switch until the user exits this game
+         */
         while (continueGame) {
             mainSwitch();
         }
     }
 
-    //give directions and ask for the amount of rows in deck array
+    /**
+     * Method to give directions to the user and ask for the amount of rows in deck array
+     */
     private static void intro() {
         System.out.println("---------------------------------------------------------------");
         System.out.println("This is the Flashcard game!\n  Directions: First enter the number of cards you're making and then enter the front & back sides of each card.\n  Then you can choose to practice the backs of your cards, where you are given the front and must answer with the back or practice the fronts.\n  Try to get the best Correct Streak!");
@@ -38,7 +46,9 @@ public class Flashcards {
         sc.nextLine();
     }
 
-    //method to have the user input data for all deck array inputs
+    /**
+     * method to have the user input data for all deck array inputs
+     */
     private static void makeDeck() {
         System.out.println("Now please enter the front and back of each card.");
         for(int i = 0; i < numofcards; i++){
@@ -50,13 +60,18 @@ public class Flashcards {
         }
     }
 
-    //method to print the current deck
+    /**
+     * A method to print the current deck
+     */
     private static void displayDeck() {
         for(int i = 0; i < numofcards; i++){
             System.out.println("Card num. " + (i + 1) + ": Front: " + deck[i][0] + " | Back: " + deck[i][1]);
         }
     }
 
+    /**
+     * The Method that displays the options for the Flashcards section of the program
+     */
     private static void mainSwitch() {
         System.out.println("\nNow that you have your cards what would you like to do? (type a or b or c, etc.)\na. Practice Backs\nb. Practice Fronts\nc. Edit a card\nd. Display deck\ne. Remake deck\nf. Exit game");
         String c = sc.nextLine();
@@ -88,7 +103,9 @@ public class Flashcards {
         }
     }
 
-    //method to print the 1st column and have the user type the 2nd column
+    /**
+     * method to print the 1st column and have the user type the 2nd column
+     */
     private static void practiceBacks(){
         System.out.println("In this you will practice the backs of your flashcards. You will be given the front and asked to type the back verbatim.\n");
         for(int i = 0; i < numofcards; i++){
@@ -110,7 +127,9 @@ public class Flashcards {
         }
     }
 
-    //method to print the 2nd column (back of flashcard) and have the user type the 1st column (front of flashcard)
+    /**
+     * method to print the 2nd column (back of flashcard) and have the user type the 1st column (front of flashcard)
+     */
     private static void practiceFronts(){
         System.out.println("In this you will practice the fronts of your flashcards. You will be given the back and asked to type the front verbatim.\n");
         for(int i = 0; i < numofcards; i++){
@@ -131,7 +150,9 @@ public class Flashcards {
         }
     }
 
-    //method to edit one row/flashcard choosing the front or back
+    /**
+     * method to edit one row/flashcard choosing the front or back
+     */
     private static void editDeck(){
         int columnNum = 3;
         int row;
@@ -152,7 +173,9 @@ public class Flashcards {
         System.out.println("Here is the fix:\nCard num. " + (row - 1) + ": Front: " + deck[(row - 1)][0] + "| Back: " + deck[(row - 1)][1]);
     }
 
-    //method to end program
+    /**
+     * A method to end the use of the Flashcard class and move back to the main switch
+     */
     public static void makeExitFlash(){
         System.out.println("Are you sure you want to stop using your flashcards? (yes/no)");
         String ans = sc.nextLine();

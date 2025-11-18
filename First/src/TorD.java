@@ -8,7 +8,9 @@ public class TorD {
     static String[] truth = {"How old are you?", "What's something you never told your mom?", "Whats an embarrasing secret you have?", "What was your middle school phase?"};
     static String[] dare = {"Do 15 push-ups!", "Say the alphabet backwards in a minute!", "Spin around for 20 seconds and walk in a straight line!", "Let your friend text one of your contacts!"};
 
-    //method for truth or dare game
+    /**
+     * A method that runs the truth or dare game
+     */
     public static void truthOrDare() {
         //t or d prompt, take input for switch
         System.out.println("This is Truth or Dare!\nWe'll give you prompts to play with your friends, if you get a repeat just retry!\n---------------------------------------");
@@ -18,7 +20,7 @@ public class TorD {
             String uIn = sc.nextLine();
             uInLow = uIn.toLowerCase();
 
-            //switch statement to pick  a truth or dare prompt or exit
+            //switch statement to pick a truth or dare prompt or exit
             switch (uInLow) {
                 case "truth":
                     outRandPrompt();
@@ -37,6 +39,10 @@ public class TorD {
             replyLow = reply.toLowerCase();
         } while (replyLow.equals("yes") || replyLow.equals("y"));
     }
+
+    /**
+     * Method that produces a random prompt from the selection of the truth array or dare array
+     */
     public static void outRandPrompt(){
         switch(uInLow) {
             case "truth":
@@ -49,7 +55,8 @@ public class TorD {
                 break;
             default:
                 System.out.println("an error occurred.");
-                    break;
+                break;
         }
     }
+
 }
