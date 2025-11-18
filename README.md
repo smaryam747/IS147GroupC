@@ -153,12 +153,12 @@ Step 5: Click OK to generate.\
 Step 6: Open docs/index.html in a browser to view the documentation.\
 
 (part two)
-Step 1: Go to your repo on GitHub.
-Step 2: Click on Settings → Pages.
-Step 3: Under Source, select:
-a.) Branch: main
-b.) Folder: /docs
-Step 4: Click Save.
-Your JavaDocs will be live at:
-https://your-username.github.io/your-repo-name/
+Step 1: Go to your repo on GitHub.\
+Step 2: Click on Settings → Pages.\
+Step 3: Under Source, select:\
+a.) Branch: main\
+b.) Folder: /docs\
+Step 4: Click Save.\
+Your JavaDocs will be live at:\
+https://your-username.github.io/your-repo-name/\
 
