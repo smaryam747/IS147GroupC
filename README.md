@@ -140,5 +140,25 @@ Step 5: Pull and Run from Docker Hub\
               docker run your-dockerhub-username/hello-world:tagname
 
 
+# Create JavaDoc & Host
+(part one)\
+Step 1: Open your project in IntelliJ IDEA.\
+Step 2: Go to Tools → Generate JavaDoc....\
+Step 3: In the popup dialog:\
+        a.) Output directory: Choose a folder like docs/.\
+        b.) Scope: Select entire project or specific packages.\
+        c.) Ensure JavaDoc executable is correctly set (e.g. javadoc).\
+Step 4: (Optional): Check options like -author, -version, etc.\
+Step 5: Click OK to generate.\
+Step 6: Open docs/index.html in a browser to view the documentation.\
 
+(part two)\
+Step 1: Go to your repo on GitHub.\
+Step 2: Click on Settings → Pages.\
+Step 3: Under Source, select:\
+a.) Branch: main\
+b.) Folder: /docs\
+Step 4: Click Save.\
+Your JavaDocs will be live at:\
+https://your-username.github.io/your-repo-name/\
 
