@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TorD {
     public static Scanner sc = new Scanner(System.in);
     public static Random rn = new Random();
-    static String uInLow;
+    private static String uInLow;
     static String[] truth = {"How old are you?", "What's something you never told your mom?", "Whats an embarrasing secret you have?", "What was your middle school phase?"};
     static String[] dare = {"Do 15 push-ups!", "Say the alphabet backwards in a minute!", "Spin around for 20 seconds and walk in a straight line!", "Let your friend text one of your contacts!"};
 
@@ -20,24 +20,29 @@ public class TorD {
             String uIn = sc.nextLine();
             uInLow = uIn.toLowerCase();
 
-            //switch statement to pick a truth or dare prompt or exit
-            switch (uInLow) {
-                case "truth":
-                    outRandPrompt();
-                    break;
-                case "dare":
-                    outRandPrompt();
-                    break;
-                case "done":
-                    break;
-                default:
-                    System.out.println("An error occurred.");
-                    break;
-            }
+            TorDswitch();
+
             System.out.println("Do you want to go again? (yes to continue)");
             String reply = sc.nextLine();
             replyLow = reply.toLowerCase();
         } while (replyLow.equals("yes") || replyLow.equals("y"));
+    }
+
+    //switch statement to pick a truth or dare prompt or exit
+    private static void TorDswitch() {
+        switch (uInLow) {
+            case "truth":
+                outRandPrompt();
+                break;
+            case "dare":
+                outRandPrompt();
+                break;
+            case "done":
+                break;
+            default:
+                System.out.println("An error occurred.");
+                break;
+        }
     }
 
     /**

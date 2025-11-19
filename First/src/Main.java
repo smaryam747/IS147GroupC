@@ -1,21 +1,39 @@
+import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.time.*;
 public class Main {
     public static Scanner sc = new Scanner(System.in);
+    public static String neatDate;
 
     public static void main(String[] args){
+        //gathers and formats the date to put into the intro prompt
+        dateFormat();
         //loop the main sequence to run until user quits
         while(true) {
-            firstSwitch();
+            mainSwitch();
         }
     }
 
     //initiates the game prompt
-    public static void firstSwitch(){
-        //output game choices
-        System.out.println("\nWelcome to the game program! What would you like to play? (type a or b or c, etc.)\na. Truth or Dare\nb. Flashcards\nc. Trivia\nd. Exit");
-        String c = sc.nextLine();
-        String cLow = c.toLowerCase();
+    public static void mainSwitch(){
+        String cLow = introPrompt();
+        gameSelect(cLow);
+    }
 
+    public static void dateFormat(){
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("E, MMM dd yyyy HH:mm:ss");
+        neatDate = LocalDateTime.now().format(formatDate);
+    }
+
+
+    private static String introPrompt() {
+        //output game choices
+        System.out.println("\nWelcome to the game program! It is currently " + neatDate + "\nWhat would you like to play? (type a or b or c, etc.)\na. Truth or Dare\nb. Flashcards\nc. Trivia\nd. Exit");
+        String c = sc.nextLine();
+        return c.toLowerCase();
+    }
+
+    private static void gameSelect(String cLow) {
         //pick which game to play
         switch (cLow) {
             case "a", "a.":
@@ -30,7 +48,7 @@ public class Main {
                 makeExit();
                 break;
             default:
-                System.out.println("This error occurred.");
+                System.out.println("An error occurred.");
                 break;
         }
     }

@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Flashcards {
     public static Scanner sc = new Scanner(System.in);
-    static int numofcards;
-    static String[][] deck;
-    static Boolean continueGame = true;
-    static short correctStreakBack = 0;
-    static short correctAmtBack = 0;
-    static short correctStreakFront = 0;
-    static short correctAmtFront = 0;
+    private static short NumofCards;
+    private static String[][] deck;
+    private static Boolean continueGame = true;
+    private static short correctStreakBack = 0;
+    private static short correctAmtBack = 0;
+    private static short correctStreakFront = 0;
+    private static short correctAmtFront = 0;
 
-    
     public static void flashCards() {
          /*
          * give directions and ask for the amount of rows in deck array
@@ -41,8 +40,8 @@ public class Flashcards {
         System.out.println("This is the Flashcard game!\n  Directions: First enter the number of cards you're making and then enter the front & back sides of each card.\n  Then you can choose to practice the backs of your cards, where you are given the front and must answer with the back or practice the fronts.\n  Try to get the best Correct Streak!");
         System.out.println("---------------------------------------------------------------");
         System.out.println("To start, please enter the number of flashcards you're making below (enter a digit):");
-        numofcards = sc.nextInt();
-        deck = new String[numofcards][2];
+        NumofCards = sc.nextShort();
+        deck = new String[NumofCards][2];
         sc.nextLine();
     }
 
@@ -51,7 +50,7 @@ public class Flashcards {
      */
     private static void makeDeck() {
         System.out.println("Now please enter the front and back of each card.");
-        for(int i = 0; i < numofcards; i++){
+        for(int i = 0; i < NumofCards; i++){
             System.out.println("Enter the front of card number " + (i + 1) + ": ");
             deck[i][0] = sc.nextLine();
 
@@ -64,7 +63,7 @@ public class Flashcards {
      * A method to print the current deck
      */
     private static void displayDeck() {
-        for(int i = 0; i < numofcards; i++){
+        for(int i = 0; i < NumofCards; i++){
             System.out.println("Card num. " + (i + 1) + ": Front: " + deck[i][0] + " | Back: " + deck[i][1]);
         }
     }
@@ -108,12 +107,12 @@ public class Flashcards {
      */
     private static void practiceBacks(){
         System.out.println("In this you will practice the backs of your flashcards. You will be given the front and asked to type the back verbatim.\n");
-        for(int i = 0; i < numofcards; i++){
+        for(int i = 0; i < NumofCards; i++){
             System.out.println("Front of card " + (i + 1) + ": " + deck[i][0]);
             System.out.println("What is the back? (enter it below)");
             String back = sc.nextLine();
             String backLow = back.toLowerCase();
-                if(backLow.equals(deck[i][1])){
+                if(backLow.equals(deck[i][1].toLowerCase())){
                     System.out.println("Correct!");
                     correctStreakBack++;
                     correctAmtBack++;
@@ -122,8 +121,8 @@ public class Flashcards {
                     correctStreakBack = 0;
                 }
 
-            System.out.println("Your current correct streak for the backs is " + correctStreakBack + "in a row!");
-            System.out.println("Your total amount correct for the backs is " + correctAmtBack + "correct!\n");
+            System.out.println("Your current correct streak for the backs is " + correctStreakBack + " in a row!");
+            System.out.println("Your total amount correct for the backs is " + correctAmtBack + " correct!\n");
         }
     }
 
@@ -132,12 +131,12 @@ public class Flashcards {
      */
     private static void practiceFronts(){
         System.out.println("In this you will practice the fronts of your flashcards. You will be given the back and asked to type the front verbatim.\n");
-        for(int i = 0; i < numofcards; i++){
+        for(int i = 0; i < NumofCards; i++){
             System.out.println("Back of card " + (i + 1) + ": " + deck[i][1]);
             System.out.println("What is the front? (enter it below)");
             String front = sc.nextLine();
             String frontLow = front.toLowerCase();
-            if(frontLow.equals(deck[i][0])){
+            if(frontLow.equals(deck[i][0].toLowerCase())){
                 System.out.println("Correct!");
                 correctStreakFront++;
                 correctAmtFront++;
@@ -187,4 +186,21 @@ public class Flashcards {
             System.out.println("Continuing game...");
         }
     }
+
+//    public short getNumofCards(){
+//        return NumofCards;
+//    }
+//    public void setNumofCards(short newNumofCards){
+//        NumofCards = newNumofCards;
+//    }
+//
+//    public String[][] getDeck(){
+//        return deck;
+//    }
+//    public void setDeck(String[][] newDeck){
+//        deck = newDeck;
+//    }
+
+
+
 }
