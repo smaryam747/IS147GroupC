@@ -28,7 +28,7 @@ public class Main {
 
     private static String introPrompt() {
         //output game choices
-        System.out.println("\nWelcome to the game program! It is currently " + neatDate + "\nWhat would you like to play? (type a or b or c, etc.)\na. Truth or Dare\nb. Flashcards\nc. Trivia\nd. Exit");
+        System.out.println("\nWelcome to the game program! It is currently " + neatDate + "\nWhat would you like to play? (type a or b or c, etc.)\na. Truth or Dare\nb. Flashcards\nc. Number Guessing Game\nd. Exit");
         String c = sc.nextLine();
         return c.toLowerCase();
     }

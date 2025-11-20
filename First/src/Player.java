@@ -10,5 +10,12 @@ public class Player {
 
     }
 
+    public String getPlayerName(){
+        return playerName;
+    }
+    public void setPlayerName(String newPlayerName){
+        playerName = newPlayerName;
+    }
+
 
 }
