@@ -1,35 +1,52 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class TorD {
+/**
+ * The Truth or Dare class that holds all methods necessary to run the Truth or Dare game in the program.
+ */
+public class TorD extends Game {
     public static Scanner sc = new Scanner(System.in);
     public static Random rn = new Random();
     private static String uInLow;
-    static String[] truth = {"How old are you?", "What's something you never told your mom?", "Whats an embarrasing secret you have?", "What was your middle school phase?"};
-    static String[] dare = {"Do 15 push-ups!", "Say the alphabet backwards in a minute!", "Spin around for 20 seconds and walk in a straight line!", "Let your friend text one of your contacts!"};
+    final static String[] truth = {"How old are you?", "What's something you never told your mom?", "Whats an embarrasing secret you have?", "What was your middle school phase?"};
+    final static String[] dare = {"Do 15 push-ups!", "Say the alphabet backwards in a minute!", "Spin around for 20 seconds and walk in a straight line!", "Let your friend text one of your contacts!"};
 
     /**
-     * A method that runs the truth or dare game
+     * A method that runs the truth or dare game.
      */
-    public static void truthOrDare() {
-        //t or d prompt, take input for switch
-        System.out.println("This is Truth or Dare!\nWe'll give you prompts to play with your friends, if you get a repeat just retry!\n---------------------------------------");
+    @Override
+    public void RunGame() {
+        intro();
+        menu1();
+    }
+
+    /**
+     * Method that repeats the game to keep giving answers and stop when the conditions are false.
+     */
+    @Override
+    public void menu1(){
         String replyLow;
         do {
-            System.out.println("So, Truth or Dare? (When you're done type done.)");
+            System.out.println("So, Truth or Dare? (When you're done type 'done'.)");
             String uIn = sc.nextLine();
             uInLow = uIn.toLowerCase();
 
-            TorDswitch();
+            menu1switch();
 
-            System.out.println("Do you want to go again? (yes to continue)");
+            System.out.println("Do you want to go again? ('yes' to continue, anything else to exit)");
             String reply = sc.nextLine();
             replyLow = reply.toLowerCase();
         } while (replyLow.equals("yes") || replyLow.equals("y"));
     }
 
-    //switch statement to pick a truth or dare prompt or exit
-    private static void TorDswitch() {
+    public void intro(){
+        System.out.println("This is Truth or Dare!\nWe'll give you prompts to play with your friends, if you get a repeat just retry!\n---------------------------------------");
+    }
+
+    /**
+     * Method that holds the menu1 switch statement.
+     */
+    public void menu1switch() {
         switch (uInLow) {
             case "truth":
                 outRandPrompt();
@@ -46,7 +63,7 @@ public class TorD {
     }
 
     /**
-     * Method that produces a random prompt from the selection of the truth array or dare array
+     * Method that produces a random prompt from the selection of the truth array or dare array.
      */
     public static void outRandPrompt(){
         switch(uInLow) {
