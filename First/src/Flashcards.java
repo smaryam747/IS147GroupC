@@ -68,21 +68,21 @@ public class Flashcards extends Game{
     }
 
     /**
-     * The Method that displays the options for the Flashcards section of the program.
+     * The Method that displays the options for the Flashcards section of the program. Part of the method passing by argument example (using String reply)
      */
     public void menu1() {
         System.out.println("\nWhat would you like to do now? (type a or b or c, etc.)\na. Practice Backs\nb. Practice Fronts\nc. Edit a card\nd. Display deck\ne. Remake deck\nf. Exit game");
         String reply = sc.nextLine();
-        String replyLow = reply.toLowerCase();
-        menu1switch(replyLow);
+        menu1switch(reply);
     }
 
     /**
-     * Method to contain the switch statement of the menu1 method.
-     * @param replyLow all lowercase reply from user to decide which method to execute next.
+     * Method to contain the switch statement of the menu1 method. Part of the method passing by argument example (using param String reply)
+     * @param reply all lowercase reply from user to decide which method to execute next.
      */
-    public void menu1switch(String replyLow){
-        switch (replyLow) {
+    public void menu1switch(String reply){
+        reply = reply.toLowerCase();
+        switch (reply) {
             case "a", "a.":
                 practiceBacks();
                 break;
