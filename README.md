@@ -162,3 +162,68 @@ Step 4: Click Save.\
 Your JavaDocs will be live at:\
 https://your-username.github.io/your-repo-name/\
 
++------------------+
+|    HelloWorld    |
++------------------+
+| + main(args)     |
++------------------+
+| Uses Main.RunGame|
++------------------+
+
+
++------------------+
+|      Main        |
++------------------+
+| + RunGame()      |
++------------------+
+
+
++------------------+
+|     Game         |
++------------------+
+| - scanner:Scanner|
++------------------+
+| + intro():void   |
++------------------+
+
+
++------------------+
+|      TorD        |
+| (Truth or Dare)  |
++------------------+
+| - rand:Random    |
+| - scanner:Scanner|
++------------------+
+| + runGame():void |
++------------------+
+
+
++------------------+
+|     Player       |
++------------------+
+| - name:String    |
+| - age:int        |
+| - flashScore:int |
++------------------+
+| + setPlayerInfo()|
+| + loadScore()    |
++------------------+
+| Uses Flashcards  |
++------------------+
+
+
++------------------+
+|   Flashcards     |
++------------------+
+| - question:String|
+| - answer:String  |
++------------------+
+| + getCorrectAmt()|
++------------------+
+
+
++------------------------+
+|   PasswordValidator    |
++------------------------+
+| + isValid(password)    |
++------------------------+
