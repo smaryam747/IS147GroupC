@@ -12,6 +12,9 @@ public class Main {
      * The main method that executes and loops the program.
      */
     public static void main(String[] args){
+
+    }
+    public static void RunGame(){
         Player.MakePlayer();
         //loop the main sequence to run until user quits
         while(true) {
