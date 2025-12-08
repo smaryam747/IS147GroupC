@@ -54,16 +54,20 @@ public class Main {
     private static void gameSelect(String cLow) {
         //pick which game to play
         switch (cLow) {
-            case "a", "a.":
+            case "a":
+            case "a.":
                 TorD.RunGame();
                 break;
-            case "b", "b.":
+            case "b":
+            case "b.":
                 Flashcards.RunGame();
                 break;
-            case "c", "c.":
+            case "c":
+            case "c.":
                 pl.showPlayerDetails();
                 break;
-            case "d", "d.":
+            case "d":
+            case "d.":
                 makeExit();
                 break;
             default:

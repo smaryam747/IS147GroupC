@@ -83,22 +83,28 @@ public class Flashcards extends Game{
     public void menu1switch(String reply){
         reply = reply.toLowerCase();
         switch (reply) {
-            case "a", "a.":
+            case "a":
+            case "a.":
                 practiceBacks();
                 break;
-            case "b", "b.":
+            case "b":
+            case "b.":
                 practiceFronts();
                 break;
-            case "c", "c.":
+            case "c":
+            case "c.":
                 editDeck();
                 break;
-            case "d", "d.":
+            case "d":
+            case "d.":
                 displayDeck();
                 break;
-            case "e", "e.":
+            case "e":
+            case "e.":
                 makeDeck();
                 break;
-            case "f", "f.":
+            case "f":
+            case "f.":
                 makeExitFlash();
                 break;
             default:

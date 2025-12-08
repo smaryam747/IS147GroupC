@@ -1,5 +1,5 @@
-FROM amazoncorretto:latest
+FROM amazoncorretto:21
 WORKDIR /app
-COPY src/ /app/
+COPY First/src/ /app/
 RUN javac *.java
 CMD ["java", "HelloWorld"]
